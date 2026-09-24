@@ -3,12 +3,70 @@
   "pillar": "money-myths",
   "status": "draft",
   "hook": "$200 a month. 30 years.",
-  "voiceover": "Two hundred dollars a month. Thirty years. Here's what the math says. You put in seventy-two thousand dollars total. At a seven percent yearly return, which is an assumption, not a promise, the account ends near two hundred forty-four thousand. Over half of that is money you never deposited. It's growth on growth. The catch? Most of it shows up in the last ten years. Quit early and you never see the curve. Comment CASH and I'll send you the free calculator, so you can run your own numbers.",
-  "chart": { "start": 0, "monthly": 200, "ratePct": 7, "years": 30, "label": "$200/mo · 7%/yr assumed", "fromMs": 3000, "toMs": 22000 },
+  "voiceover": "Two hundred dollars a month. Thirty years. Here's what the math says. You put in seventy-two thousand dollars total. Assume a seven percent yearly return. That's an assumption, not a promise. The account ends near two hundred forty-four thousand. Over half of that is money you never deposited. It's growth on growth. The catch? Most of it shows up in the last ten years. Quit early and you never see the curve. Comment CASH and I'll send you the free calculator, so you can run your own numbers.",
+  "chart": {
+    "start": 0,
+    "monthly": 200,
+    "ratePct": 7,
+    "years": 30,
+    "label": "$200/mo · 7%/yr assumed",
+    "fromMs": 3000,
+    "toMs": 22000,
+    "anchor": "Assume"
+  },
   "ctaKeyword": "CASH",
   "ctaText": "I’ll DM you the free calculator",
   "caption": "$200/month for 30 years: $72K in, ~$244K out at an assumed 7%/yr. Most of the growth lands in the final decade. Math, not a promise. Education only, not financial advice. I'm an AI character.",
   "youtubeTitle": "What $200 a Month Becomes in 30 Years (the actual math)",
-  "hashtags": ["#compoundinterest", "#personalfinance", "#investing101", "#moneytips"],
-  "sources": ["On-screen math: future value of $200/mo, monthly compounding, 7%/yr, 360 months = $243,994 (src/lib/compound.ts)"]
+  "hashtags": [
+    "#compoundinterest",
+    "#personalfinance",
+    "#investing101",
+    "#moneytips"
+  ],
+  "sources": [
+    "On-screen math: future value of $200/mo, monthly compounding, 7%/yr, 360 months = $243,994 (src/lib/compound.ts)"
+  ],
+  "shots": [
+    {
+      "line": "Two hundred dollars a month.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Thirty years. Here's what the math says. You put in seventy-two thousand dollars total.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Assume a seven percent yearly return. That's an assumption, not a promise.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "The account ends near two hundred forty-four thousand.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "Over half of that is money you never deposited. It's growth on growth.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "The catch? Most of it shows up in the last ten years.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Quit early and you never see the curve.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Comment CASH and I'll send you the free calculator, so you can run your own numbers.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    }
+  ]
 }

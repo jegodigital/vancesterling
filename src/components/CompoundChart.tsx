@@ -17,6 +17,7 @@ export const CompoundChart: React.FC<Props> = ({ label, fromMs, toMs, ...input }
   const series = useMemo(() => compoundSeries(input), [input.start, input.monthly, input.ratePct, input.years]);
 
   if (tMs < fromMs || tMs > toMs + 400) return null;
+  if (toMs - fromMs < 1000) return null;
   const progress = interpolate(tMs, [fromMs, fromMs + (toMs - fromMs) * 0.75], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',

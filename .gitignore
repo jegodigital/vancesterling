@@ -11,3 +11,5 @@ public/captions/*
 !public/captions/.gitkeep
 __pycache__/
 .venv/
+public/flow/
+public/edits/

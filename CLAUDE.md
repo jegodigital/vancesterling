@@ -1,6 +1,6 @@
 # CLAUDE.md — Vance Sterling video engine
 
-Vance Sterling is an **openly AI** finance-education character. This repo turns a script JSON into a finished 9:16 master MP4 and schedules it to TikTok, Reels and Shorts.
+Vance Sterling is an **openly AI** finance-education character. He is **generated on camera in Google Flow** (Character `@Vance`, Omni Flash, 9:16). This repo writes the Flow shot lists, cuts the dead air out of the clips with Whisper + audio level, finishes the video in Remotion (captions, chart cutaways, CTA, disclosure) and schedules it to TikTok, Reels and Shorts.
 Read `persona/VANCE-STERLING.md` before writing any script. Research and sources are in `docs/research/`.
 
 ## Non-negotiables
@@ -12,16 +12,28 @@ Read `persona/VANCE-STERLING.md` before writing any script. Research and sources
 6. **Never post a `--preview` render.** Previews use estimated timings and a red safe-zone overlay. `schedule.ts` refuses them.
 7. No secrets in the repo. Keys live in `.env` (gitignored); see `.env.example`.
 
-## Pipeline
+## Pipeline (main path: Flow talking head)
 ```
-content/scripts/vs-NNN.json            # 1 script = 1 video (schema: scripts/lib.ts)
-  └─ npm run voice -- <script>         # ElevenLabs with-timestamps → public/audio/<id>.mp3 + public/captions/<id>.json
-  └─ npm run render -- <script>        # Remotion → public/renders/<id>.mp4 + <id>.meta.json
-       (--preview: no voice needed; estimated timings + safe-zone overlay; for layout checks only)
+content/scripts/vs-NNN.json              # 1 script = 1 video (schema: scripts/lib.ts)
+  └─ npm run flow -- <script>            # splits voiceover into shots → flow/prompts/<id>.md (+ `shots` in the JSON)
+  └─ [owner, in Flow]                    # generate each shot with @Vance → Drive "Vance Sterling/flow/<id>/shot-NN.mp4"
+  └─ [Claude, Drive MCP]                 # download clips → public/flow/<id>/shot-NN.mp4
+  └─ npm run edit -- <script>            # scripts/edit.py: audio level finds speech, cuts dead air (>400 ms → 220 ms),
+                                         #   Whisper words → captions, per-shot line check → public/edits/<id>.json
+  └─ npm run render -- <script> --flow   # Remotion → public/renders/<id>.mp4 (refuses if any shot is flagged REGENERATE)
+  └─ [Claude, Drive MCP]                 # upload to Drive "Vance Sterling/renders (for your review)"
   └─ npm run schedule -- public/renders/<id>.meta.json --media-url <https> --start YYYY-MM-DDTHH:mm:ss
-       # TikTok T, IG Reel T+45m, YT Short T+90m via Metricool REST (Advanced plan)
 ```
-For audio we didn't generate (e.g. a re-record), use `pip install -r scripts/requirements.txt`, then `python3 scripts/transcribe.py --audio … --output public/captions/<id>.json`.
+Drive folders: root `1Ek5vkNnSi5RDKySfUtIjYHwJxYXjGHB-`, flow `1_Qco9Q614-3FEXgIiOPjWc9MtftUV1gk`, renders `1xki70xpiyPfGUaBAooNHJBXXdHEvyCEo`.
+Flow setup and credit math: `flow/FLOW-SETUP.md`. There is no Flow API: the owner runs Flow in their browser.
+
+**Flow shot rules:** one whole sentence per clip where possible, ≤ 18 words per sentence (`npm run flow` warns; rewrite, don't split mid-thought). Every prompt starts with `@Vance` and ends with `(no subtitles)`.
+
+**Fallback path (faceless, no Flow):** `npm run voice -- <script>` (ElevenLabs with-timestamps) → `npm run render -- <script>`. `--preview` renders with estimated timings + red safe-zone overlay for layout checks only.
+For outside audio: `pip install -r scripts/requirements.txt`, then `python3 scripts/transcribe.py --audio … --output public/captions/<id>.json`.
+Python deps for edit.py: `pip install -r scripts/requirements.txt`.
+
+Charts: with a Flow edit the chart is a full-screen cutaway (his voice keeps playing). Set `chart.anchor` to the spoken word it starts on.
 
 Script status flow: `draft → approved → rendered → scheduled → posted`. Update `status` in the JSON at each step.
 

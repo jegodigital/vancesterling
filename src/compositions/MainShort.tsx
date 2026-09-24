@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, Audio, OffthreadVideo, staticFile } from 'remotion';
+import { AbsoluteFill, Audio, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { loadFont } from '@remotion/fonts';
 import { Captions } from '../components/Captions';
 import { CompoundChart } from '../components/CompoundChart';
@@ -8,6 +8,7 @@ import { Disclosure } from '../components/Disclosure';
 import { HookTitle } from '../components/HookTitle';
 import { MotionBackground } from '../components/MotionBackground';
 import { SafeZone, SafeZoneOverlay } from '../components/SafeZone';
+import { SegmentTrack } from '../components/SegmentTrack';
 import { MainShortProps } from '../lib/schema';
 
 // Fonts are vendored in public/fonts so renders never depend on the network.
@@ -18,13 +19,21 @@ for (const weight of ['600', '700', '800', '900']) {
 
 export const MainShort: React.FC<MainShortProps> = (p) => {
   const ctaFromMs = Math.max(0, p.durationMs - 4000);
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const tMs = (frame / fps) * 1000;
+  // With a talking-head edit, the chart is a full-screen cutaway: his voice keeps playing underneath.
+  const chartCutaway = !!(p.segments && p.chart && tMs >= p.chart.fromMs && tMs <= p.chart.toMs + 400);
   return (
     <AbsoluteFill style={{ fontFamily, backgroundColor: '#000' }}>
-      {p.backgroundVideoSrc ? (
+      {p.segments ? (
+        <SegmentTrack segments={p.segments} />
+      ) : p.backgroundVideoSrc ? (
         <OffthreadVideo src={staticFile(p.backgroundVideoSrc)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       ) : (
         <MotionBackground />
       )}
+      {chartCutaway ? <MotionBackground /> : null}
       {/* Vignette for caption contrast over any background */}
       <AbsoluteFill
         style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.65) 100%)' }}

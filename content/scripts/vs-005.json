@@ -3,12 +3,65 @@
   "pillar": "money-myths",
   "status": "draft",
   "hook": "Start at 25 or 35?",
-  "voiceover": "Two people each invest three hundred dollars a month until sixty-five. One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return. The thirty-five year old puts in one hundred eight thousand and ends near three hundred sixty-six thousand. The twenty-five year old puts in one hundred forty-four thousand, only thirty-six thousand more, and ends near seven hundred eighty-seven thousand. More than double. Those ten early years do more work than the last thirty. Comment CASH and I'll send you the calculator to see your own gap.",
-  "chart": { "start": 0, "monthly": 300, "ratePct": 7, "years": 40, "label": "$300/mo from age 25 · 7%/yr assumed", "fromMs": 3000, "toMs": 26000 },
+  "voiceover": "Two people each invest three hundred dollars a month until sixty-five. One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return. The thirty-five year old puts in one hundred eight thousand and ends near three hundred sixty-six thousand. The twenty-five year old puts in one hundred forty-four thousand. Only thirty-six thousand more. And ends near seven hundred eighty-seven thousand. More than double. Those ten early years do more work than the last thirty. Comment CASH and I'll send you the calculator to see your own gap.",
+  "chart": {
+    "start": 0,
+    "monthly": 300,
+    "ratePct": 7,
+    "years": 40,
+    "label": "$300/mo from age 25 · 7%/yr assumed",
+    "fromMs": 3000,
+    "toMs": 26000,
+    "anchor": "Two"
+  },
   "ctaKeyword": "CASH",
   "ctaText": "I’ll DM you the free calculator",
   "caption": "$300/mo to 65 at an assumed 7%: start at 35 → ~$366K. Start at 25 → ~$787K. Ten years, more than double. Math, not a promise. I'm an AI character. Education only.",
   "youtubeTitle": "Starting at 25 vs 35: The $421,000 Difference",
-  "hashtags": ["#investing", "#compoundinterest", "#personalfinance", "#financialliteracy"],
-  "sources": ["Math: FV $300/mo, monthly compounding, 7%: 480 months = $787,444; 360 months = $365,991 (src/lib/compound.ts)"]
+  "hashtags": [
+    "#investing",
+    "#compoundinterest",
+    "#personalfinance",
+    "#financialliteracy"
+  ],
+  "sources": [
+    "Math: FV $300/mo, monthly compounding, 7%: 480 months = $787,444; 360 months = $365,991 (src/lib/compound.ts)"
+  ],
+  "shots": [
+    {
+      "line": "Two people each invest three hundred dollars a month until sixty-five.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "The thirty-five year old puts in one hundred eight thousand and ends near three hundred sixty-six thousand.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "The twenty-five year old puts in one hundred forty-four thousand. Only thirty-six thousand more.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "And ends near seven hundred eighty-seven thousand. More than double.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Those ten early years do more work than the last thirty.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Comment CASH and I'll send you the calculator to see your own gap.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    }
+  ]
 }

@@ -6,6 +6,8 @@
   "scripts": {
     "studio": "remotion studio",
     "typecheck": "tsc --noEmit",
+    "flow": "tsx scripts/flow-prompts.ts",
+    "edit": "python3 scripts/edit.py --script",
     "voice": "tsx scripts/voiceover.ts",
     "render": "tsx scripts/render.ts",
     "schedule": "tsx distribution/schedule.ts"

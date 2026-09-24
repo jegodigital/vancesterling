@@ -8,6 +8,50 @@
   "ctaText": "I’ll DM you the free calculator",
   "caption": "Rule of 72: years to double ≈ 72 ÷ yearly rate. 6% → ~12 yrs. 9% → ~8 yrs. 24% debt → ~3 yrs. Quick estimate, not a promise. I'm an AI character. Education only.",
   "youtubeTitle": "The Rule of 72: Know When Your Money Doubles",
-  "hashtags": ["#ruleof72", "#compoundinterest", "#investing101", "#personalfinance"],
-  "sources": ["Math: exact doubling time ln2/ln(1+r): 6% = 11.9 yrs, 9% = 8.04 yrs, 24% = 3.2 yrs; rule of 72 gives 12, 8, 3"]
+  "hashtags": [
+    "#ruleof72",
+    "#compoundinterest",
+    "#investing101",
+    "#personalfinance"
+  ],
+  "sources": [
+    "Math: exact doubling time ln2/ln(1+r): 6% = 11.9 yrs, 9% = 8.04 yrs, 24% = 3.2 yrs; rule of 72 gives 12, 8, 3"
+  ],
+  "shots": [
+    {
+      "line": "Here's a trick to know how fast money doubles, in your head.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Take seventy-two and divide it by the yearly return. Six percent?",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Seventy-two divided by six is twelve. Your money doubles in about twelve years.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Nine percent? About eight years. It works on debt too.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "A card at twenty-four percent doubles what you owe in about three years if you never pay it.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "That's the rule of seventy-two. It's an estimate, but it's close.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Comment CASH and I'll send you the calculator for the exact number.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    }
+  ]
 }

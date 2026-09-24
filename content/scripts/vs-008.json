@@ -8,6 +8,60 @@
   "ctaText": "I’ll DM you the free calculator",
   "caption": "Avalanche = highest rate first, lowest total interest. Snowball = smallest balance first, faster wins. The best plan is the one you finish. I'm an AI character. Education only, not financial advice.",
   "youtubeTitle": "Debt Avalanche vs Snowball: Which Actually Wins?",
-  "hashtags": ["#debtfree", "#debtsnowball", "#debtavalanche", "#personalfinance"],
-  "sources": ["Avalanche minimizes total interest by construction (math). Behavioral claim kept general; verify before adding any study citation."]
+  "hashtags": [
+    "#debtfree",
+    "#debtsnowball",
+    "#debtavalanche",
+    "#personalfinance"
+  ],
+  "sources": [
+    "Avalanche minimizes total interest by construction (math). Behavioral claim kept general; verify before adding any study citation."
+  ],
+  "shots": [
+    {
+      "line": "You have three debts.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Which one do you pay first? Option one, the avalanche.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Put every extra dollar on the highest interest rate.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Mathematically, that saves the most money. Option two, the snowball.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "Kill the smallest balance first for a quick win.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "It costs a bit more in interest, but some people stick with it longer because they see progress.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "The best method is the one you actually finish. If you're disciplined, avalanche.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "If you need momentum, snowball.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "Comment CASH and I'll send you the free calculator to compare both.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    }
+  ]
 }

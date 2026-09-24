@@ -4,11 +4,69 @@
   "status": "draft",
   "hook": "$5 a day isn't the problem",
   "voiceover": "People love to say your five dollar coffee is why you're broke. Let's check. Five dollars a day is about one hundred fifty a month. Invested for ten years at seven percent, that's roughly twenty-six thousand. Real money. But over thirty years it's about one hundred eighty-three thousand. So the coffee isn't the villain. Time is the lever. Small amounts only get big when you give them decades. Cut what you don't care about, not what you love. Comment CASH and I'll send you the calculator to price your own habits.",
-  "chart": { "start": 0, "monthly": 150, "ratePct": 7, "years": 30, "label": "$150/mo · 7%/yr assumed", "fromMs": 4000, "toMs": 22000 },
+  "chart": {
+    "start": 0,
+    "monthly": 150,
+    "ratePct": 7,
+    "years": 30,
+    "label": "$150/mo · 7%/yr assumed",
+    "fromMs": 4000,
+    "toMs": 22000,
+    "anchor": "Invested"
+  },
   "ctaKeyword": "CASH",
   "ctaText": "I’ll DM you the free calculator",
   "caption": "$150/mo (≈$5/day) at an assumed 7%: ~$26K after 10 years, ~$183K after 30. Time is the lever, not the latte. I'm an AI character. Education only, not financial advice.",
   "youtubeTitle": "Is Your $5 Coffee Really Making You Broke?",
-  "hashtags": ["#lattefactor", "#compoundinterest", "#moneytips", "#personalfinance"],
-  "sources": ["Math: FV $150/mo, monthly compounding, 7%: 120 months = $25,963; 360 months = $182,996"]
+  "hashtags": [
+    "#lattefactor",
+    "#compoundinterest",
+    "#moneytips",
+    "#personalfinance"
+  ],
+  "sources": [
+    "Math: FV $150/mo, monthly compounding, 7%: 120 months = $25,963; 360 months = $182,996"
+  ],
+  "shots": [
+    {
+      "line": "People love to say your five dollar coffee is why you're broke.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Let's check. Five dollars a day is about one hundred fifty a month.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Invested for ten years at seven percent, that's roughly twenty-six thousand. Real money.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "But over thirty years it's about one hundred eighty-three thousand.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "So the coffee isn't the villain. Time is the lever.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Small amounts only get big when you give them decades.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Cut what you don't care about, not what you love.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Comment CASH and I'll send you the calculator to price your own habits.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    }
+  ]
 }

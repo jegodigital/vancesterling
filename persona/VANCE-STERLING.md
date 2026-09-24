@@ -60,9 +60,10 @@ Education only — not financial advice.
 - The "AI character · Education, not financial advice" tag is burned into every frame.
 - **Vary the format.** YouTube's "inauthentic content" monetization policy (July 2025) targets mass-produced, templated AI videos, so rotate between chart videos, list videos, and avatar-on-camera videos. Every script gets a human read-through before it renders.
 
-## 5. Visual reference set (for when the avatar goes on camera)
+## 5. Visual reference set
 
-Use one locked identity (Higgsfield Soul character, or Google Flow "Ingredients"). Build a **9-panel reference grid**:
+**Live setup: a Google Flow Character named `Vance`** (2 images plus a voice). Steps are in `flow/FLOW-SETUP.md`.
+The 9-panel grid below is for later: extra angles, or thumbnails.
 
 | # | Shot |
 |---|---|

@@ -10,7 +10,9 @@ export const mainShortSchema = z.object({
   voiceoverSrc: z.string().optional(), // path under public/, e.g. "audio/vs-001.mp3"
   musicSrc: z.string().optional(),
   musicVolume: z.number().min(0).max(1).default(0.08),
-  backgroundVideoSrc: z.string().optional(), // Veo/Flow clip under public/; falls back to motion background
+  backgroundVideoSrc: z.string().optional(), // single looping b-roll clip under public/; falls back to motion background
+  // Flow edit (from scripts/edit.py): clips played back-to-back with dead air removed. Audio comes from the clips.
+  segments: z.array(z.object({ src: z.string(), fromMs: z.number(), toMs: z.number() })).optional(),
   chart: z
     .object({
       start: z.number(),

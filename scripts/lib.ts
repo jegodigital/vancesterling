@@ -10,7 +10,16 @@ export const scriptSchema = z.object({
   hook: z.string().max(40), // on-screen, first 3s
   voiceover: z.string(), // exactly what gets spoken
   chart: z
-    .object({ start: z.number(), monthly: z.number(), ratePct: z.number(), years: z.number(), label: z.string(), fromMs: z.number(), toMs: z.number() })
+    .object({
+      start: z.number(),
+      monthly: z.number(),
+      ratePct: z.number(),
+      years: z.number(),
+      label: z.string(),
+      fromMs: z.number(),
+      toMs: z.number(),
+      anchor: z.string().optional(), // chart starts on the first spoken word matching this (real timings beat estimates)
+    })
     .optional(),
   ctaKeyword: z.string(),
   ctaText: z.string(),
@@ -19,6 +28,8 @@ export const scriptSchema = z.object({
   hashtags: z.array(z.string()).max(5),
   sources: z.array(z.string()), // every number in the script must trace to one of these (or to on-screen math)
   backgroundVideoSrc: z.string().optional(),
+  // Flow shots: filled by `npm run flow`. Joined lines must equal `voiceover`.
+  shots: z.array(z.object({ line: z.string(), framing: z.string(), action: z.string() })).optional(),
 });
 export type Script = z.infer<typeof scriptSchema>;
 

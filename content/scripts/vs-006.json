@@ -8,6 +8,55 @@
   "ctaText": "I’ll DM you the free template",
   "caption": "The pay-yourself-first system: 1) savings move out on payday, automatically 2) bills on autopay from one account 3) the rest is guilt-free spending. Decide once, let it run. I'm an AI character. Education only.",
   "youtubeTitle": "Stop Budgeting: The 3-Account Money System",
-  "hashtags": ["#budgeting", "#payyourselffirst", "#moneytips", "#personalfinance"],
-  "sources": ["No numeric claims. Method only."]
+  "hashtags": [
+    "#budgeting",
+    "#payyourselffirst",
+    "#moneytips",
+    "#personalfinance"
+  ],
+  "sources": [
+    "No numeric claims. Method only."
+  ],
+  "shots": [
+    {
+      "line": "Most budgets fail because they need willpower every single day.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "Here's a system that needs it once. Step one.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "The day your paycheck lands, an automatic transfer moves your savings out first.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Step two. Bills go on autopay from one account. Step three.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "Whatever is left in your spending account is yours, guilt free.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
+    },
+    {
+      "line": "You're not tracking every coffee. You're deciding once, then letting the system run.",
+      "framing": "Medium shot",
+      "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Set it up in one afternoon.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Comment CASH and I'll send you the free template I use to map it out.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
+    }
+  ]
 }
