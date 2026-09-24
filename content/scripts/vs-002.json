@@ -1,0 +1,13 @@
+{
+  "id": "vs-002",
+  "pillar": "capital-allocation",
+  "status": "draft",
+  "hook": "1% sounds small. It isn't.",
+  "voiceover": "A one percent fee sounds tiny. Watch what it does. Take one hundred thousand dollars and leave it alone for thirty years. At seven percent a year it grows to about seven hundred sixty-one thousand. Now take one percent off the top every year, so you earn six. You end near five hundred seventy-four thousand. That fee just cost you about one hundred eighty-seven thousand dollars. Same money. Same market. One line in the fine print. So before you pick any fund, find the expense ratio. Comment CASH and I'll send you the calculator to check your own.",
+  "ctaKeyword": "CASH",
+  "ctaText": "I’ll DM you the free calculator",
+  "caption": "$100K for 30 years: ~$761K at 7% vs ~$574K at 6%. A 1% yearly fee ≈ $187K gone. Check the expense ratio before you buy anything. Education only, not financial advice. I'm an AI character.",
+  "youtubeTitle": "How a 1% Fee Can Cost You $187,000",
+  "hashtags": ["#investingtips", "#indexfunds", "#personalfinance", "#fees"],
+  "sources": ["Math: 100000*1.07^30 = 761,226; 100000*1.06^30 = 574,349; difference 186,876 (annual compounding, fee modeled as 1 point off return)"]
+}

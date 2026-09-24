@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+out/
+public/renders/*
+!public/renders/.gitkeep
+public/audio/*
+!public/audio/.gitkeep
+public/captions/*
+!public/captions/.gitkeep
+__pycache__/
+.venv/
