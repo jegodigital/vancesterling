@@ -25,7 +25,7 @@ content/scripts/vs-NNN.json              # 1 script = 1 video (schema: scripts/l
   └─ npm run schedule -- public/renders/<id>.meta.json --media-url <https> --start YYYY-MM-DDTHH:mm:ss
 ```
 Drive folders: root `1Ek5vkNnSi5RDKySfUtIjYHwJxYXjGHB-`, flow `1_Qco9Q614-3FEXgIiOPjWc9MtftUV1gk`, renders `1xki70xpiyPfGUaBAooNHJBXXdHEvyCEo`.
-Flow setup and credit math: `flow/FLOW-SETUP.md`. There is no Flow API: the owner runs Flow in their browser.
+Flow setup and credit math: `flow/FLOW-SETUP.md`. There is no Flow API. Flow is driven through Claude in Chrome from a session on the owner's computer: see `flow/RUN-IN-BROWSER.md` (cloud sessions can't reach the browser).
 
 **Flow shot rules:** one whole sentence per clip where possible, ≤ 18 words per sentence (`npm run flow` warns; rewrite, don't split mid-thought). Every prompt starts with `@Vance` and ends with `(no subtitles)`.
 
