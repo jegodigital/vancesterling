@@ -10,6 +10,8 @@ Vance is made on camera in **Google Flow**. This repo writes the Flow shot lists
 | First 8 scripts (drafts, need approval) | `content/scripts/vs-001…008.json` |
 | Flow project setup (one time) | `flow/FLOW-SETUP.md` |
 | Flow shot lists, ready to paste | `flow/prompts/vs-001…008.md` |
+| Free Wealth Calculator (the "Comment WEALTH" freebie), live at https://vancesterling-calculator.vercel.app | `calculator/index.html` |
+| Viral teardown of @theviviennerothwell | `docs/research/2026-09-25-vivienne-rothwell-teardown.md` |
 | Engine rules | `CLAUDE.md` |
 
 Quick start:

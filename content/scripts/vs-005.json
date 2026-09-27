@@ -1,9 +1,9 @@
 {
   "id": "vs-005",
-  "pillar": "money-myths",
-  "status": "draft",
-  "hook": "Start at 25 or 35?",
-  "voiceover": "Two people each invest three hundred dollars a month until sixty-five. One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return. The thirty-five year old puts in one hundred eight thousand and ends near three hundred sixty-six thousand. The twenty-five year old puts in one hundred forty-four thousand. Only thirty-six thousand more. And ends near seven hundred eighty-seven thousand. More than double. Those ten early years do more work than the last thirty. Comment CASH and I'll send you the calculator to see your own gap.",
+  "pillar": "old-money-rules",
+  "status": "approved",
+  "hook": "There's a reason rich kids start early",
+  "voiceover": "There's a reason old money starts early. Two people each invest three hundred dollars a month until sixty-five. One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return. The late starter puts in one hundred eight thousand. And ends near three hundred sixty-six thousand. The early starter puts in thirty-six thousand more. And ends near seven hundred eighty-seven thousand. More than double. Those first ten years do the heavy lifting. Comment WEALTH for the free calculator.",
   "chart": {
     "start": 0,
     "monthly": 300,
@@ -14,11 +14,12 @@
     "toMs": 26000,
     "anchor": "Two"
   },
-  "ctaKeyword": "CASH",
+  "ctaKeyword": "WEALTH",
   "ctaText": "I’ll DM you the free calculator",
-  "caption": "$300/mo to 65 at an assumed 7%: start at 35 → ~$366K. Start at 25 → ~$787K. Ten years, more than double. Math, not a promise. I'm an AI character. Education only.",
-  "youtubeTitle": "Starting at 25 vs 35: The $421,000 Difference",
+  "caption": "$300/mo to 65 at an assumed 7%: start at 35 → ~$366K. Start at 25 → ~$787K. Ten years, more than double. Math, not a promise. Comment WEALTH for the calculator. I'm an AI character. Education only.",
+  "youtubeTitle": "There's a Reason Rich Kids Start Investing Early",
   "hashtags": [
+    "#oldmoney",
     "#investing",
     "#compoundinterest",
     "#personalfinance",
@@ -29,39 +30,44 @@
   ],
   "shots": [
     {
-      "line": "Two people each invest three hundred dollars a month until sixty-five.",
+      "line": "There's a reason old money starts early.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return.",
+      "line": "Two people each invest three hundred dollars a month until sixty-five.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "The thirty-five year old puts in one hundred eight thousand and ends near three hundred sixty-six thousand.",
+      "line": "One starts at twenty-five. One starts at thirty-five. Same seven percent assumed return.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "The twenty-five year old puts in one hundred forty-four thousand. Only thirty-six thousand more.",
+      "line": "The late starter puts in one hundred eight thousand.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
     },
     {
-      "line": "And ends near seven hundred eighty-seven thousand. More than double.",
+      "line": "And ends near three hundred sixty-six thousand.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "Those ten early years do more work than the last thirty.",
+      "line": "The early starter puts in thirty-six thousand more.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Comment CASH and I'll send you the calculator to see your own gap.",
+      "line": "And ends near seven hundred eighty-seven thousand. More than double.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
+    },
+    {
+      "line": "Those first ten years do the heavy lifting. Comment WEALTH for the free calculator.",
+      "framing": "Medium-wide shot",
+      "action": "He sits back, relaxed and confident"
     }
   ]
 }

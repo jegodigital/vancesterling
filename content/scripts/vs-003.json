@@ -1,45 +1,46 @@
 {
   "id": "vs-003",
-  "pillar": "cashflow-systems",
-  "status": "draft",
-  "hook": "$5,000 card. $100 a month.",
-  "voiceover": "Five thousand dollars on a credit card at twenty-two percent. You pay a hundred dollars a month. How long until it's gone? Eleven and a half years. And you pay about eight thousand seven hundred dollars in interest. More than the debt itself. Now pay two hundred fifty a month instead. Gone in about two years, and interest drops to roughly thirteen hundred. The extra hundred fifty a month saves you over seven thousand dollars. The payment size is the whole game. Comment CASH for the free calculator and run your own card.",
-  "ctaKeyword": "CASH",
+  "pillar": "old-money-rules",
+  "status": "approved",
+  "hook": "Only broke people pay card interest",
+  "voiceover": "Only broke people pay card interest. Here's why. Five thousand dollars on a card at twenty-two percent. You pay a hundred dollars a month. It takes over eleven years to clear. And you pay about eight thousand seven hundred in interest. That's more than the debt itself. Pay two hundred fifty a month instead. Gone in about two years, and interest drops to roughly thirteen hundred. Old money has a rule. Never pay interest on things that don't grow. Comment WEALTH for the free calculator.",
+  "ctaKeyword": "WEALTH",
   "ctaText": "I’ll DM you the free calculator",
-  "caption": "$5K at 22% APR: $100/mo = 137 months + ~$8.7K interest. $250/mo = 26 months + ~$1.3K interest. Payment size is the whole game. Example numbers, not advice. I'm an AI character.",
-  "youtubeTitle": "The $100 Credit Card Payment Trap (do the math)",
+  "caption": "$5K at 22% APR: $100/mo = 137 months + ~$8.7K interest. $250/mo = 26 months + ~$1.3K interest. Never pay interest on things that don't grow. Example numbers, not advice. Comment WEALTH for the calculator. I'm an AI character.",
+  "youtubeTitle": "Only Broke People Pay Credit Card Interest (the math)",
   "hashtags": [
+    "#oldmoney",
     "#creditcarddebt",
     "#debtfree",
     "#personalfinance",
     "#moneytips"
   ],
   "sources": [
-    "Math: $5,000 at 22% APR, monthly interest, fixed $100 payment = 137 months, $8,678 interest; fixed $250 = 26 months, $1,286 interest"
+    "Math: $5,000 at 22% APR, monthly interest, fixed $100 payment = 137 months (11.4 yrs), $8,678 interest; fixed $250 = 26 months, $1,286 interest"
   ],
   "shots": [
     {
-      "line": "Five thousand dollars on a credit card at twenty-two percent.",
+      "line": "Only broke people pay card interest.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "You pay a hundred dollars a month. How long until it's gone?",
+      "line": "Here's why. Five thousand dollars on a card at twenty-two percent.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Eleven and a half years.",
+      "line": "You pay a hundred dollars a month. It takes over eleven years to clear.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "And you pay about eight thousand seven hundred dollars in interest.",
+      "line": "And you pay about eight thousand seven hundred in interest.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
     },
     {
-      "line": "More than the debt itself. Now pay two hundred fifty a month instead.",
+      "line": "That's more than the debt itself. Pay two hundred fifty a month instead.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
@@ -49,19 +50,14 @@
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "The extra hundred fifty a month saves you over seven thousand dollars.",
+      "line": "Old money has a rule. Never pay interest on things that don't grow.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "The payment size is the whole game.",
+      "line": "Comment WEALTH for the free calculator.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
-    },
-    {
-      "line": "Comment CASH for the free calculator and run your own card.",
-      "framing": "Close-up",
-      "action": "He leans slightly toward the camera, eyebrows slightly raised"
     }
   ]
 }

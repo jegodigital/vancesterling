@@ -1,8 +1,8 @@
 import React from 'react';
 import { interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
-import { BRAND } from '../lib/brand';
 
 // On-screen hook for the first 3 seconds (the drop-off filter window).
+// Style from the viral playbook (persona §4b.1): big white text, black outline, no box, below the face.
 export const HookTitle: React.FC<{ text: string }> = ({ text }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -14,18 +14,18 @@ export const HookTitle: React.FC<{ text: string }> = ({ text }) => {
       style={{
         opacity: out,
         transform: `translateY(${(1 - inS) * 40}px)`,
-        background: BRAND.ivory,
-        color: BRAND.ink,
-        padding: '18px 30px',
-        borderRadius: 18,
-        fontSize: 72,
+        position: 'absolute',
+        color: '#FFFFFF',
+        fontSize: 80,
         fontWeight: 900,
-        lineHeight: 1.05,
+        lineHeight: 1.08,
         textAlign: 'center',
-        letterSpacing: -1.5,
+        letterSpacing: -1,
         maxWidth: 820,
         textWrap: 'balance',
-        boxShadow: '0 20px 60px rgba(0,0,0,0.45)',
+        WebkitTextStroke: '10px #000',
+        paintOrder: 'stroke fill',
+        textShadow: '0 6px 24px rgba(0,0,0,0.6)',
       }}
     >
       {text}

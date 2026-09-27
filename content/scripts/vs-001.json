@@ -1,9 +1,9 @@
 {
   "id": "vs-001",
-  "pillar": "money-myths",
-  "status": "draft",
-  "hook": "$200 a month. 30 years.",
-  "voiceover": "Two hundred dollars a month. Thirty years. Here's what the math says. You put in seventy-two thousand dollars total. Assume a seven percent yearly return. That's an assumption, not a promise. The account ends near two hundred forty-four thousand. Over half of that is money you never deposited. It's growth on growth. The catch? Most of it shows up in the last ten years. Quit early and you never see the curve. Comment CASH and I'll send you the free calculator, so you can run your own numbers.",
+  "pillar": "old-money-rules",
+  "status": "rendered",
+  "hook": "Old money starts with $200",
+  "voiceover": "Two hundred dollars a month. That's how old money starts. Thirty years. You put in seventy-two thousand dollars total. Assume a seven percent yearly return. That's an assumption, not a promise. The account ends near two hundred forty-four thousand. More than half of it is growth, not your deposits. And most of it shows up in the last ten years. Old money has one rule. Start early, and never stop. Comment WEALTH for the free calculator.",
   "chart": {
     "start": 0,
     "monthly": 200,
@@ -12,13 +12,15 @@
     "label": "$200/mo · 7%/yr assumed",
     "fromMs": 3000,
     "toMs": 22000,
-    "anchor": "Assume"
+    "anchor": "Assume",
+    "endAnchor": "$244,000"
   },
-  "ctaKeyword": "CASH",
+  "ctaKeyword": "WEALTH",
   "ctaText": "I’ll DM you the free calculator",
-  "caption": "$200/month for 30 years: $72K in, ~$244K out at an assumed 7%/yr. Most of the growth lands in the final decade. Math, not a promise. Education only, not financial advice. I'm an AI character.",
-  "youtubeTitle": "What $200 a Month Becomes in 30 Years (the actual math)",
+  "caption": "$200/month for 30 years: $72K in, ~$244K out at an assumed 7%/yr. Most of the growth lands in the final decade. Start early, never stop. Math, not a promise. Comment WEALTH for the free calculator. Education only, not financial advice. I'm an AI character.",
+  "youtubeTitle": "Old Money Starts With $200 a Month (the actual math)",
   "hashtags": [
+    "#oldmoney",
     "#compoundinterest",
     "#personalfinance",
     "#investing101",
@@ -34,7 +36,7 @@
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "Thirty years. Here's what the math says. You put in seventy-two thousand dollars total.",
+      "line": "That's how old money starts. Thirty years. You put in seventy-two thousand dollars total.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
@@ -49,22 +51,22 @@
       "action": "He sits back, relaxed and confident"
     },
     {
-      "line": "Over half of that is money you never deposited. It's growth on growth.",
+      "line": "More than half of it is growth, not your deposits.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "The catch? Most of it shows up in the last ten years.",
+      "line": "And most of it shows up in the last ten years.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Quit early and you never see the curve.",
+      "line": "Old money has one rule. Start early, and never stop.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "Comment CASH and I'll send you the free calculator, so you can run your own numbers.",
+      "line": "Comment WEALTH for the free calculator.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
     }

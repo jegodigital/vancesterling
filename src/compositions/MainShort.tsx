@@ -44,17 +44,17 @@ export const MainShort: React.FC<MainShortProps> = (p) => {
 
       <SafeZone debug={p.showSafeZone}>
         <Disclosure text={p.disclosure} />
-        {/* Upper block: hook, then chart */}
+        {/* Upper block: chart (the face owns this area otherwise) */}
         <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
-          <HookTitle text={p.hook} />
           {p.chart ? (
             <div style={{ position: 'absolute' }}>
               <CompoundChart {...p.chart} />
             </div>
           ) : null}
         </div>
-        {/* Lower block: CTA sits above captions; captions own the bottom of the safe zone */}
+        {/* Lower block: hook (first 3 s, below the face like the viral old-money format), CTA at the end; captions own the bottom */}
         <div style={{ minHeight: 200, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', width: '100%' }}>
+          <HookTitle text={p.hook} />
           {p.ctaKeyword ? <CtaCard keyword={p.ctaKeyword} text={p.ctaText} fromMs={ctaFromMs} /> : null}
         </div>
         <div style={{ height: 260, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>

@@ -13,3 +13,4 @@ __pycache__/
 .venv/
 public/flow/
 public/edits/
+calculator/.vercel

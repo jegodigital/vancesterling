@@ -50,11 +50,13 @@ function main() {
   // Chart: start on its anchor word if given, and clear out before the CTA card (last 4s).
   let chart: MainShortProps['chart'];
   if (s.chart) {
-    const { anchor, ...c } = s.chart;
+    const { anchor, endAnchor, ...c } = s.chart;
     const clean = (t: string) => t.toLowerCase().replace(/[^a-z0-9]/g, '');
     const hit = anchor ? captions.find((w) => clean(w.text) === clean(anchor)) : undefined;
     const fromMs = hit ? hit.startMs : c.fromMs;
-    const toMs = Math.min(fromMs + (c.toMs - c.fromMs), durationMs - 4500);
+    const endHit = endAnchor ? captions.find((w) => w.startMs > fromMs && clean(w.text) === clean(endAnchor)) : undefined;
+    if (endAnchor && !endHit) console.warn(`⚠️  Chart endAnchor "${endAnchor}" not found after the start; using toMs.`);
+    const toMs = Math.min(endHit ? endHit.endMs : fromMs + (c.toMs - c.fromMs), durationMs - 4500);
     if (anchor && !hit) console.warn(`⚠️  Chart anchor "${anchor}" not found in captions; using fromMs ${c.fromMs}.`);
     if (toMs - fromMs >= 3000) chart = { ...c, fromMs, toMs };
     else console.warn('⚠️  Not enough room for the chart before the CTA; chart skipped.');

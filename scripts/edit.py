@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Flow clips -> tight edit. The audio level decides where speech is (exact cut points);
-Whisper supplies the words (captions + a check that each shot said its line).
+Flow clips -> tight edit. Whisper decides WHERE the words are (so breaths, lip noise and room tone
+drop out); the audio level gives the exact cut points and the real pauses.
+Whisper also supplies the captions and a check that each shot said its line.
 
 Usage:
   python3 scripts/edit.py --script content/scripts/vs-001.json
@@ -9,8 +10,9 @@ Usage:
     writes  public/edits/<id>.json  -> segments to play + captions on the output timeline + per-shot QA
 
 Rules (see CLAUDE.md):
-  - speech = 20 ms windows louder than max(-45 dBFS, clip peak - 35 dB)
-  - keep LEAD_MS before speech starts and TAIL_MS after it ends in each shot
+  - speech = 20 ms windows louder than max(-45 dBFS, clip peak - 35 dB) that overlap a Whisper word;
+    sound with no word in it (breath, click, room tone) is cut
+  - keep LEAD_MS before the first word and TAIL_MS after the last word of each shot
   - any pause longer than MAX_GAP_MS is cut down to KEEP_GAP_MS; cuts land in silence, never mid-word
   - each shot's transcript is compared with the line it was supposed to say;
     below MIN_MATCH the shot is flagged REGENERATE (Veo garbled or cut off the line)
@@ -23,10 +25,10 @@ import os
 import re
 import sys
 
-LEAD_MS = 100
-TAIL_MS = 200
-MAX_GAP_MS = 400
-KEEP_GAP_MS = 220
+LEAD_MS = 60  # before the first word of a shot
+TAIL_MS = 140  # after the last word of a shot
+MAX_GAP_MS = 250  # pauses longer than this get shortened (2026-09-26: was 400 -> 2 s dead spots survived)
+KEEP_GAP_MS = 140  # ...to this
 MIN_MATCH = 0.80
 
 
@@ -54,6 +56,27 @@ def norm(text: str) -> list[str]:
     t = t.replace("%", " percent")
     t = re.sub(r"\d+", lambda m: num_words(int(m.group(0))), t)
     return re.sub(r"[^a-z' ]+", " ", t).replace("'", "").split()
+
+
+def punctuate(caps, line):
+    """Copy the script line's sentence ends onto Whisper's caption words (Whisper drops a period
+    when the pause after it is short, so caption pages ran across sentences: "MONEY STARTS 30")."""
+    exp, ends = [], []
+    for word in line.split():
+        toks = norm(word)
+        if toks:
+            exp += toks
+            ends += [None] * (len(toks) - 1) + [word[-1] if word[-1] in ".!?" else None]
+    cap, owner = [], []
+    for ci, c in enumerate(caps):
+        for t in norm(c["text"]):
+            cap.append(t)
+            owner.append(ci)
+    for a, b, n in difflib.SequenceMatcher(None, cap, exp, autojunk=False).get_matching_blocks():
+        for k in range(n):
+            mark, ci = ends[b + k], owner[a + k]
+            if mark and (a + k + 1 == len(owner) or owner[a + k + 1] != ci):
+                caps[ci]["text"] = re.sub(r"[,;:.!?]$", "", caps[ci]["text"]) + mark
 
 
 def speech_ranges(path: str):
@@ -107,6 +130,13 @@ def transcribe(model, path: str):
     return words, int(info.duration * 1000)
 
 
+def word_speech(words, loud):
+    """Loud regions that contain a Whisper word. The audio level gives exact edges and real pauses
+    (Whisper word timings run together and swallow pauses); Whisper tells us which sounds are words,
+    so breaths, clicks and room tone after the line are dropped."""
+    return [r for r in loud if any(w["startMs"] < r[1] and w["endMs"] > r[0] for w in words)]
+
+
 def keep_ranges(speech, clip_ms):
     """Speech regions -> ranges to keep: padded at the shot edges, long pauses shrunk to KEEP_GAP_MS."""
     if not speech:
@@ -145,22 +175,40 @@ def main():
     out_ms = 0
     for i, clip in enumerate(clips):
         words, _ = transcribe(model, clip)
-        speech, clip_ms = speech_ranges(clip)
+        loud, clip_ms = speech_ranges(clip)
+        speech = word_speech(words, loud)
         said = " ".join(w["text"] for w in words)
         want = expected[i] if i < len(expected) else ""
         match = difflib.SequenceMatcher(None, norm(said), norm(want)).ratio() if want else None
         verdict = "OK" if match is None or match >= MIN_MATCH else "REGENERATE"
         rel = os.path.relpath(clip, "public")
         kept = 0
-        for start, end in keep_ranges(speech, clip_ms):
+        shot_first_caption = len(captions)
+        ranges = keep_ranges(speech, clip_ms)
+        # Every word goes to the kept range it overlaps most (nearest if none): Whisper's word edges
+        # spill into the pauses, so a midpoint test used to drop words like "That's" at a cut.
+        home = {}
+        for wi, w in enumerate(words):
+            ov = [min(w["endMs"], b) - max(w["startMs"], a) for a, b in ranges]
+            best = max(range(len(ranges)), key=lambda k: ov[k]) if ranges else None
+            if best is not None and ov[best] <= 0:
+                best = min(range(len(ranges)), key=lambda k: min(abs(w["startMs"] - ranges[k][1]), abs(w["endMs"] - ranges[k][0])))
+            home.setdefault(best, []).append(w)
+        for k, (start, end) in enumerate(ranges):
             segments.append({"src": rel, "fromMs": start, "toMs": end})
-            for w in words:
-                mid = (w["startMs"] + w["endMs"]) / 2
-                if start <= mid < end:
-                    ws, we = max(w["startMs"], start), min(w["endMs"], end)
-                    captions.append({"text": w["text"], "startMs": out_ms + ws - start, "endMs": out_ms + we - start})
+            for w in home.get(k, []):
+                ws = min(max(w["startMs"], start), end - 40)
+                we = max(min(w["endMs"], end), ws + 40)
+                captions.append({"text": w["text"], "startMs": out_ms + ws - start, "endMs": out_ms + we - start})
             out_ms += end - start
             kept += end - start
+        if want:
+            punctuate(captions[shot_first_caption:], want)
+        # Each shot is its own sentence: Whisper often drops the final period at a clip end,
+        # which made caption pages run across two shots ("TOTAL ASSUME A").
+        if captions and words and not re.search(r"[.!?]$", captions[-1]["text"]):
+            end_punct = want.strip()[-1:] if want.strip()[-1:] in ".!?" else "."
+            captions[-1]["text"] = re.sub(r"[,;:]$", "", captions[-1]["text"]) + end_punct
         qa.append({
             "shot": os.path.basename(clip),
             "clipMs": clip_ms,

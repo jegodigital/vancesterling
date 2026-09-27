@@ -1,14 +1,15 @@
 {
   "id": "vs-002",
-  "pillar": "capital-allocation",
-  "status": "draft",
-  "hook": "1% sounds small. It isn't.",
-  "voiceover": "A one percent fee sounds tiny. Watch what it does. Take one hundred thousand dollars and leave it alone for thirty years. At seven percent a year it grows to about seven hundred sixty-one thousand. Now take one percent off the top every year, so you earn six. You end near five hundred seventy-four thousand. That fee just cost you about one hundred eighty-seven thousand dollars. Same money. Same market. One line in the fine print. So before you pick any fund, find the expense ratio. Comment CASH and I'll send you the calculator to check your own.",
-  "ctaKeyword": "CASH",
+  "pillar": "old-money-rules",
+  "status": "approved",
+  "hook": "Only broke people ignore this fee",
+  "voiceover": "Only broke people ignore this one line. The fund fee. One percent sounds tiny. Watch what it does. Take one hundred thousand dollars and leave it for thirty years. At an assumed seven percent, it grows to about seven hundred sixty-one thousand. Now take one percent off every year. You end near five hundred seventy-four thousand. That fee cost about one hundred eighty-seven thousand dollars. Old money reads the fine print. Find the expense ratio before you buy anything. Comment WEALTH for the free calculator.",
+  "ctaKeyword": "WEALTH",
   "ctaText": "I’ll DM you the free calculator",
-  "caption": "$100K for 30 years: ~$761K at 7% vs ~$574K at 6%. A 1% yearly fee ≈ $187K gone. Check the expense ratio before you buy anything. Education only, not financial advice. I'm an AI character.",
-  "youtubeTitle": "How a 1% Fee Can Cost You $187,000",
+  "caption": "$100K for 30 years: ~$761K at 7% vs ~$574K at 6%. A 1% yearly fee ≈ $187K gone. Old money reads the fine print: check the expense ratio first. Comment WEALTH for the calculator. Education only, not financial advice. I'm an AI character.",
+  "youtubeTitle": "Only Broke People Ignore This 1% Fee ($187K math)",
   "hashtags": [
+    "#oldmoney",
     "#investingtips",
     "#indexfunds",
     "#personalfinance",
@@ -19,54 +20,44 @@
   ],
   "shots": [
     {
-      "line": "A one percent fee sounds tiny.",
+      "line": "Only broke people ignore this one line.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "Watch what it does.",
+      "line": "The fund fee. One percent sounds tiny. Watch what it does.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Take one hundred thousand dollars and leave it alone for thirty years.",
+      "line": "Take one hundred thousand dollars and leave it for thirty years.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "At seven percent a year it grows to about seven hundred sixty-one thousand.",
+      "line": "At an assumed seven percent, it grows to about seven hundred sixty-one thousand.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
     },
     {
-      "line": "Now take one percent off the top every year, so you earn six.",
+      "line": "Now take one percent off every year. You end near five hundred seventy-four thousand.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "You end near five hundred seventy-four thousand.",
+      "line": "That fee cost about one hundred eighty-seven thousand dollars.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "That fee just cost you about one hundred eighty-seven thousand dollars. Same money.",
+      "line": "Old money reads the fine print. Find the expense ratio before you buy anything.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "Same market. One line in the fine print.",
+      "line": "Comment WEALTH for the free calculator.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
-    },
-    {
-      "line": "So before you pick any fund, find the expense ratio.",
-      "framing": "Close-up",
-      "action": "He leans slightly toward the camera, eyebrows slightly raised"
-    },
-    {
-      "line": "Comment CASH and I'll send you the calculator to check your own.",
-      "framing": "Medium shot",
-      "action": "He gestures calmly with one hand"
     }
   ]
 }

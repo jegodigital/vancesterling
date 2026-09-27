@@ -1,9 +1,9 @@
 {
   "id": "vs-007",
-  "pillar": "money-myths",
-  "status": "draft",
-  "hook": "$5 a day isn't the problem",
-  "voiceover": "People love to say your five dollar coffee is why you're broke. Let's check. Five dollars a day is about one hundred fifty a month. Invested for ten years at seven percent, that's roughly twenty-six thousand. Real money. But over thirty years it's about one hundred eighty-three thousand. So the coffee isn't the villain. Time is the lever. Small amounts only get big when you give them decades. Cut what you don't care about, not what you love. Comment CASH and I'll send you the calculator to price your own habits.",
+  "pillar": "old-money-rules",
+  "status": "approved",
+  "hook": "Your coffee isn't why you're broke",
+  "voiceover": "Your five dollar coffee isn't why you're broke. Let's check the math. Five dollars a day is about one hundred fifty a month. Invested ten years at an assumed seven percent, that's roughly twenty-six thousand. Over thirty years, it's about one hundred eighty-three thousand. So the coffee isn't the villain. Time is. Old money knows small amounts only get big with decades. Cut what you don't care about, not what you love. Comment WEALTH for the free calculator.",
   "chart": {
     "start": 0,
     "monthly": 150,
@@ -14,11 +14,12 @@
     "toMs": 22000,
     "anchor": "Invested"
   },
-  "ctaKeyword": "CASH",
+  "ctaKeyword": "WEALTH",
   "ctaText": "I’ll DM you the free calculator",
-  "caption": "$150/mo (≈$5/day) at an assumed 7%: ~$26K after 10 years, ~$183K after 30. Time is the lever, not the latte. I'm an AI character. Education only, not financial advice.",
-  "youtubeTitle": "Is Your $5 Coffee Really Making You Broke?",
+  "caption": "$150/mo (≈$5/day) at an assumed 7%: ~$26K after 10 years, ~$183K after 30. Time is the lever, not the latte. Comment WEALTH for the calculator. I'm an AI character. Education only, not financial advice.",
+  "youtubeTitle": "Your Coffee Isn't Why You're Broke (the real math)",
   "hashtags": [
+    "#oldmoney",
     "#lattefactor",
     "#compoundinterest",
     "#moneytips",
@@ -29,44 +30,49 @@
   ],
   "shots": [
     {
-      "line": "People love to say your five dollar coffee is why you're broke.",
+      "line": "Your five dollar coffee isn't why you're broke.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "Let's check. Five dollars a day is about one hundred fifty a month.",
+      "line": "Let's check the math.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Invested for ten years at seven percent, that's roughly twenty-six thousand. Real money.",
+      "line": "Five dollars a day is about one hundred fifty a month.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "But over thirty years it's about one hundred eighty-three thousand.",
+      "line": "Invested ten years at an assumed seven percent, that's roughly twenty-six thousand.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
     },
     {
-      "line": "So the coffee isn't the villain. Time is the lever.",
+      "line": "Over thirty years, it's about one hundred eighty-three thousand.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "Small amounts only get big when you give them decades.",
+      "line": "So the coffee isn't the villain. Time is.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
+    },
+    {
+      "line": "Old money knows small amounts only get big with decades.",
+      "framing": "Close-up",
+      "action": "He holds eye contact, slight nod"
     },
     {
       "line": "Cut what you don't care about, not what you love.",
-      "framing": "Close-up",
-      "action": "He holds eye contact, slight nod"
-    },
-    {
-      "line": "Comment CASH and I'll send you the calculator to price your own habits.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
+    },
+    {
+      "line": "Comment WEALTH for the free calculator.",
+      "framing": "Close-up",
+      "action": "He leans slightly toward the camera, eyebrows slightly raised"
     }
   ]
 }

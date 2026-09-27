@@ -13,13 +13,29 @@ const MAX_SENTENCE = 18; // one whole sentence may go up to ~7 s; longer ones mu
 
 // Continuity: one look, a set per pillar. Must match persona/VANCE-STERLING.md §5.
 const LOOK =
-  'Vance Sterling, a fictional man in his mid-30s with short dark hair and neat light stubble, wearing a navy fine-knit sweater over an open-collar white shirt';
+  'Vance Sterling, a fictional man in his early 70s with sharp silver swept-back hair, a neatly trimmed white beard and round tortoiseshell glasses, wearing a deep emerald velvet smoking jacket with a gold pocket square';
+// Real, ordinary places only (owner rule 2026-09-24): nothing staged or fantasy (no vaults, gold bars, sci-fi offices).
 const SETS: Record<Script['pillar'], string> = {
-  'money-myths': 'a private library with dark wood shelves and a warm desk lamp, soft cinematic key light',
-  'capital-allocation': 'a dark executive office high in a skyscraper at night, city lights through the window behind him, soft key light',
-  'cashflow-systems': 'a clean modern desk with one monitor showing a simple line chart, dark room, soft cinematic key light',
-  'business-teardowns': 'a dark executive office high in a skyscraper at night, city lights behind him, soft key light',
+  'money-myths': 'his own home study, lived-in, with wooden bookshelves, a leather armchair and a desk lamp, natural evening light from a window',
+  'capital-allocation': 'his kitchen table at home, a coffee mug and reading glasses case on the wooden table, soft morning daylight from a window',
+  'cashflow-systems': 'the covered back porch of his family house, a wooden chair, a garden softly out of focus behind him, late-afternoon natural light',
+  'business-teardowns': 'his home office desk with a laptop and a few papers, ordinary suburban house, soft daylight from a window',
+  'old-money-rules': 'the stone garden terrace of his well-kept family home, a small table with a coffee cup, trimmed hedges and old trees behind him, soft natural daylight',
 };
+// old-money-rules rotates to a new real place every video (viral playbook §4b.5), picked by the script number.
+// vs-001 stays in the home study: its shot-01 was already generated there.
+const OLD_MONEY_SETS = [
+  SETS['money-myths'],
+  SETS['old-money-rules'],
+  SETS['capital-allocation'],
+  SETS['cashflow-systems'],
+  'the back seat of his parked car, beige leather seats, a quiet tree-lined street outside the window, soft daylight',
+  SETS['business-teardowns'],
+  'a quiet, empty golf-club lounge with wood paneling, a leather club chair and a window onto the green, soft daylight',
+  'the wooden dock of his lake house, sitting in a canvas chair, calm lake and trees behind him, early-evening natural light',
+];
+const setFor = (s: Script) =>
+  s.pillar === 'old-money-rules' ? OLD_MONEY_SETS[(Number(s.id.slice(3)) - 1) % OLD_MONEY_SETS.length] : SETS[s.pillar];
 const FRAMES = [
   { framing: 'Close-up', action: 'He leans slightly toward the camera, eyebrows slightly raised' },
   { framing: 'Medium shot', action: 'He gestures calmly with one hand' },
@@ -69,13 +85,13 @@ export const clipSeconds = (line: string) => {
 // `@Vance` = the saved Flow Character (face + clothes + voice locked). Look text repeats it for continuity.
 export const shotPrompt = (s: Script, shot: { line: string; framing: string; action: string }) =>
   [
-    `@Vance. ${shot.framing}, vertical 9:16. ${LOOK}, in ${SETS[s.pillar]}.`,
+    `@Vance. ${shot.framing}, vertical 9:16. ${LOOK}, in ${setFor(s)}.`,
     `${shot.action}. He looks straight into the camera and says, calm and confident:`,
     `"${shot.line}"`,
-    'Realistic lip sync, natural pace. Ambient noise: quiet room tone only, no music. (no subtitles)',
+    'Looks like a real, unstaged home video: natural light, ordinary real-world room, realistic skin and fabric, handheld-steady camera. Realistic lip sync, natural pace. Ambient noise: quiet room tone only, no music. (no subtitles)',
   ].join(' ');
 
-export const NEGATIVE = 'subtitles, captions, on-screen text, logos, watermark text, music, extra people';
+export const NEGATIVE = 'subtitles, captions, on-screen text, logos, watermark text, music, extra people, fantasy set, surreal, gold bars, bank vault, CGI look, plastic skin';
 
 function main() {
   const file = process.argv[2];
@@ -93,7 +109,7 @@ function main() {
     '',
     'Flow settings: project **Vance Sterling** · model **Omni Flash 720p** · **9:16** · outputs **1** · length as listed per shot.',
     `Negative prompt (every shot): \`${NEGATIVE}\``,
-    `Credit estimate (Omni 720p, 1 take each): ${shots.reduce((t, x) => t + ({ 4: 7, 6: 10, 8: 12, 10: 15 } as Record<number, number>)[clipSeconds(x.line)], 0)} credits.`,
+    `Credit estimate (Omni 720p, 1 take each): ${shots.reduce((t, x) => t + ({ 4: 12, 6: 12, 8: 12, 10: 15 } as Record<number, number>) /* measured 2026-09-25: Omni 1.1 Flash renders 4/6 s asks as 8 s = 12 credits */[clipSeconds(x.line)], 0)} credits.`,
     'Download each keeper as `shot-NN.mp4` into Drive folder `Vance Sterling/flow/' + s.id + '/`. Re-roll any shot with burned-in text, face drift or a wrong word.',
     '',
     ...shots.flatMap((shot, i) => [

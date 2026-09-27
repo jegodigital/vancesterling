@@ -1,14 +1,15 @@
 {
   "id": "vs-004",
-  "pillar": "money-myths",
-  "status": "draft",
-  "hook": "Double your money: divide by 72",
-  "voiceover": "Here's a trick to know how fast money doubles, in your head. Take seventy-two and divide it by the yearly return. Six percent? Seventy-two divided by six is twelve. Your money doubles in about twelve years. Nine percent? About eight years. It works on debt too. A card at twenty-four percent doubles what you owe in about three years if you never pay it. That's the rule of seventy-two. It's an estimate, but it's close. Comment CASH and I'll send you the calculator for the exact number.",
-  "ctaKeyword": "CASH",
+  "pillar": "old-money-rules",
+  "status": "approved",
+  "hook": "Teach your kids this money trick",
+  "voiceover": "Every wealthy family should teach its kids this trick. How fast does money double? Take seventy-two. Divide it by the yearly return. Six percent? Seventy-two divided by six is twelve. It doubles in about twelve years. Nine percent? About eight years. Now the scary part. A card at twenty-four percent doubles what you owe in about three years. That's the rule of seventy-two. It's an estimate, but it's close. Comment WEALTH for the free calculator.",
+  "ctaKeyword": "WEALTH",
   "ctaText": "I’ll DM you the free calculator",
-  "caption": "Rule of 72: years to double ≈ 72 ÷ yearly rate. 6% → ~12 yrs. 9% → ~8 yrs. 24% debt → ~3 yrs. Quick estimate, not a promise. I'm an AI character. Education only.",
-  "youtubeTitle": "The Rule of 72: Know When Your Money Doubles",
+  "caption": "Rule of 72: years to double ≈ 72 ÷ yearly rate. 6% → ~12 yrs. 9% → ~8 yrs. 24% card debt → ~3 yrs. Teach it to your kids. Quick estimate, not a promise. Comment WEALTH for the calculator. I'm an AI character. Education only.",
+  "youtubeTitle": "The Money Trick Every Wealthy Family Should Teach Its Kids",
   "hashtags": [
+    "#oldmoney",
     "#ruleof72",
     "#compoundinterest",
     "#investing101",
@@ -19,27 +20,27 @@
   ],
   "shots": [
     {
-      "line": "Here's a trick to know how fast money doubles, in your head.",
+      "line": "Every wealthy family should teach its kids this trick.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
     {
-      "line": "Take seventy-two and divide it by the yearly return. Six percent?",
+      "line": "How fast does money double? Take seventy-two. Divide it by the yearly return.",
       "framing": "Medium shot",
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Seventy-two divided by six is twelve. Your money doubles in about twelve years.",
+      "line": "Six percent? Seventy-two divided by six is twelve. It doubles in about twelve years.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     },
     {
-      "line": "Nine percent? About eight years. It works on debt too.",
+      "line": "Nine percent? About eight years. Now the scary part.",
       "framing": "Medium-wide shot",
       "action": "He sits back, relaxed and confident"
     },
     {
-      "line": "A card at twenty-four percent doubles what you owe in about three years if you never pay it.",
+      "line": "A card at twenty-four percent doubles what you owe in about three years.",
       "framing": "Close-up",
       "action": "He leans slightly toward the camera, eyebrows slightly raised"
     },
@@ -49,7 +50,7 @@
       "action": "He gestures calmly with one hand"
     },
     {
-      "line": "Comment CASH and I'll send you the calculator for the exact number.",
+      "line": "Comment WEALTH for the free calculator.",
       "framing": "Close-up",
       "action": "He holds eye contact, slight nod"
     }

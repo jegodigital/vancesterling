@@ -9,8 +9,8 @@
 |---|---|
 | Name | Vance Sterling |
 | What he is | An AI-generated finance-education character. Says so in every bio and on every video. |
-| Look | Mid-30s man, calm and composed. Short dark hair, neat stubble, navy or charcoal knit / open-collar shirt. Private library, dark high-rise office at night, clean desk with one monitor showing a chart. |
-| Voice | Calm, low-mid American male. Slow and sure. Never hype, never shouting. |
+| Look | **Old-money grandpa** (chosen by the owner 2026-09-24; the generic mid-30s look was rejected as not viral). Early 70s, sharp silver swept-back hair, neatly trimmed white beard, round tortoiseshell glasses, deep emerald velvet smoking jacket with a gold pocket square. **Sets must be real, ordinary places** (owner rule 2026-09-24: nothing that looks staged or fake): his home study, his kitchen table, the back porch of his house, his home office desk. Natural light. The gold-vault photos are only the Character reference images, never a video set. |
+| Voice | Calm, low American male in his early 70s, slightly gravelly, unhurried. Dry wit. Never hype, never shouting. |
 | Tagline | **"The math, not the hype."** |
 | Promise to the viewer | Every number on screen can be checked. If it's an assumption, he says so out loud. |
 
@@ -42,6 +42,7 @@ Education only — not financial advice.
 
 | Pillar id | What | Example |
 |---|---|---|
+| `old-money-rules` | **Lead pillar (2026-09-25).** How wealthy families handle money, told as rules, lists and "only broke people…" hooks, each paid off with real math or a cited rule | "Only broke people pay the credit card minimum"; "4 documents every family needs before 60"; "Never say 'I can't afford it' in front of your kids" |
 | `money-myths` | A common belief, tested with math | The rule of 72; the latte factor; starting at 25 vs 35 |
 | `capital-allocation` | Where each dollar should go first | Fees, debt avalanche vs snowball, emergency fund |
 | `cashflow-systems` | Set-and-forget money systems | Pay-yourself-first; the credit card payment trap |
@@ -59,6 +60,17 @@ Education only — not financial advice.
 - Second 0–3: on-screen hook plus spoken hook. Middle: the math, with a chart when there is a curve to show. Last 4 s: comment-keyword CTA card.
 - The "AI character · Education, not financial advice" tag is burned into every frame.
 - **Vary the format.** YouTube's "inauthentic content" monetization policy (July 2025) targets mass-produced, templated AI videos, so rotate between chart videos, list videos, and avatar-on-camera videos. Every script gets a human read-through before it renders.
+
+## 4b. Viral playbook (from the @theviviennerothwell teardown, 2026-09-25)
+Full teardown with numbers and sources: `docs/research/2026-09-25-vivienne-rothwell-teardown.md`.
+1. **The hook is the thumbnail.** Big white hook text with a black outline, mid-frame (inside the safe zone), on screen from frame 0, 3–9 words.
+2. **Use one of 5 hook patterns:** "Only broke people ___" · "Rich people / wealthy families never ___" · "There's a reason rich kids never ___" · "N signs / N things / N documents" · "___ nobody tells you". The payoff must be true (math or a cited rule).
+3. **Tell rules in the third person** ("Wealthy families…", "Old money…"). Never "when I…", "my father…", "in my 60 years…" (no fake experience, FTC).
+4. **Every video ends with one-word comment bait: "Comment WEALTH."** ManyChat sends the free calculator in one private reply. Her Reels with a keyword got 2.5K–6.4K comments; without one, 172.
+5. **Use a new real place every video,** upscale but believable: home study, garden terrace, kitchen, car back seat, golf-club lounge, lake-house dock. No jets, vaults or fantasy sets.
+6. **Make things people share with family:** money rules for kids, retirement documents, what not to say. Shares are what she earns on 100K+ Reels (345–602 each).
+7. **Post daily once the pipeline works.** Only ~9% of her Reels passed 100K, so volume matters. The kill rule in §7 still applies.
+8. **Keep the "AI content" label on.** Her Reels carried it and still reached 418K.
 
 ## 5. Visual reference set
 
@@ -78,14 +90,14 @@ The 9-panel grid below is for later: extra angles, or thumbnails.
 | 9 | Laughing, relaxed, warm lamp light |
 
 **Base prompt:**
-> Photorealistic portrait of a fictional man in his mid-30s, calm composed expression, short dark hair, neat light stubble, navy fine-knit sweater over open-collar white shirt, private library with dark wood shelves, soft cinematic key light, 85mm, shallow depth of field, natural skin texture, no text, no logos.
+> Photorealistic cinematic portrait of a fictional man in his early 70s, sharp silver swept-back hair, neatly trimmed white beard, round tortoiseshell glasses, deep emerald velvet smoking jacket with a gold pocket square, sitting in a dim bank vault lined with gold bars and old leather ledgers, warm lamp light, knowing half-smile, no text, no logos.
 
 Do **not** prompt for, or resemble, any real person. Keep lighting and wardrobe consistent across the grid.
 
 ## 6. Funnel (proposed — owner approval needed before any product goes live)
 
 ```
-Video → "Comment CASH" → ManyChat private reply (1 message, within 7 days of the comment)
+Video → "Comment WEALTH" → ManyChat private reply (1 message, within 7 days of the comment)
       → free Compound & Debt Calculator (email opt-in)
       → thank-you page: $37 product
       → email nurture → later tiers

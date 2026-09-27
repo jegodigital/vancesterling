@@ -5,7 +5,7 @@ import { z } from 'zod';
 // One script = one video. Lives in content/scripts/<id>.json.
 export const scriptSchema = z.object({
   id: z.string().regex(/^vs-\d{3}$/),
-  pillar: z.enum(['cashflow-systems', 'capital-allocation', 'business-teardowns', 'money-myths']),
+  pillar: z.enum(['cashflow-systems', 'capital-allocation', 'business-teardowns', 'money-myths', 'old-money-rules']),
   status: z.enum(['draft', 'approved', 'rendered', 'scheduled', 'posted']),
   hook: z.string().max(40), // on-screen, first 3s
   voiceover: z.string(), // exactly what gets spoken
@@ -19,6 +19,7 @@ export const scriptSchema = z.object({
       fromMs: z.number(),
       toMs: z.number(),
       anchor: z.string().optional(), // chart starts on the first spoken word matching this (real timings beat estimates)
+      endAnchor: z.string().optional(), // chart finishes (curve reaches the last year) on the first matching word after the start
     })
     .optional(),
   ctaKeyword: z.string(),
